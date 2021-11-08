@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Display:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- Error -->
+    <div class="errorDiv"> 
+        <i class="fas fa-2x fa-times error"></i>
+        <span class="errorMessage">Errormessage</span>
+        
+        <p class="errorP">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, est?</p>
+    </div>
+
+    <!-- Success -->
+    <div class="successDiv"> 
+        <i class="fas fa-2x fa-check success"></i>
+        <span class="successMessage">Successful</span>
+    </div>
+
+    <!-- Scroll -->
+    <div style="top: 4%; right: 2%;" class="absolute">
+        <div class="scrollDiv">
+            <div class="e up"><i onclick="scroll('up')" class="fas fa-arrow-up"></i></div>
+            <div class="e left"><i onclick="" class="fas fa-arrow-left"></i></div>
+            <div class="circle"><i class="far fa-circle"></i></div>
+            <div class="e right"><i onclick="" class="fas fa-arrow-right"></i></div>
+            <div class="e down"><i onclick="" class="fas fa-arrow-down"></i></div>
+        </div>
+        <div style="margin-top: 20px;">
+            <button onclick="preserveOnOff()" class="btn preserve-btn">preserve</button>
+        </div>
+    </div>
+
+    <canvas id="canvas">error: browser does not support canvas</canvas>
+    <script src="display.js"></script>
+    <script>
+
+        let preserve = false;
+
+        function preserveOnOff(){
+            preserve = !preserve;
+
+            if(preserve == true){
+                document.querySelector('.preserve-btn').style.backgroundColor = '#333';
+                document.querySelector('.preserve-btn').style.color = '#fff';
+            }
+            else{
+                document.querySelector('.preserve-btn').style.backgroundColor = '#fff';
+                document.querySelector('.preserve-btn').style.color = '#333';
+            }
+
+            return;
+        }
+
+    </script>
+</body>
+
+</html>

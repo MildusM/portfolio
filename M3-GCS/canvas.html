@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Display:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-left">
+                <div class="shapes">
+                    <select name="" id="options" class="dropdown">
+                        <option value="" disabled selected>Shapes</option>
+                        <option value="reSize">resize</option>
+                        <option value="0">circle</option>
+                        <option value="1">rectangle</option>
+                        <option value="2">line</option>
+                        <option value="3">pixel</option>
+                    </select>
+                    <!-- <p class="advctr" onclick="buttonPress()">adv. ctr</p> -->
+                </div>
+                
+                <div class="text-command" id="text-command">
+                    <div>
+                        <button class="command-btn" onclick="renderParser()">Command</button>
+                        <button class="text-btn" onclick="renderText()">Text</button>
+                    </div>
+                    
+                    <textarea name="" id="textinput" cols="40" rows="2" placeholder="Text..."></textarea>
+                </div>
+                 
+            </div>
+            
+            <div class="navbar-right">
+                <div class="numbers" id="numbers">
+                    
+                </div>
+
+                <div class="inputs" id="color">
+                    
+                </div>
+                
+                <div class="run-clear">
+                    <button class="btn" onclick="writeShape()">run</button>
+                    <button class="btn" id="clear" onclick="clearCanvas()">clear</button>
+                    <div></div>
+                </div>
+            </div>
+
+        </nav>
+
+        
+    </header>
+
+    <!-- Scroll -->
+    <div style="top: 10%; right: 2%;" class="absolute">
+        <div class="scrollDiv">
+            <div class="e up"><i onclick="startTimer(0)" class="fas fa-arrow-up"></i></div>
+            <div class="e left"><i onclick="startTimer(1)" class="fas fa-arrow-left"></i></div>
+            <div class="circle"><i class="far fa-circle" onclick="ScrollStop()"></i></div>
+            <div class="e right"><i onclick="startTimer(2)" class="fas fa-arrow-right"></i></div>
+            <div class="e down"><i onclick="startTimer(3)" class="fas fa-arrow-down"></i></div>
+        </div>
+        <div style="margin-top: 20px;">
+            <button onclick="btnOn('preserve')" class="btn preserve-btn">preserve</button>
+        </div>
+    </div>
+
+    <!-- Error -->
+
+    <!-- Error -->
+    <div class="errorDiv"> 
+        <i class="fas fa-2x fa-times error"></i>
+        <span class="errorMessage">Errormessage</span>
+        
+        <p class="errorP">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, est?</p>
+    </div>
+
+    <!-- Success -->
+    <div class="successDiv" id="success"> 
+        <i class="fas fa-2x fa-check success"></i>
+        <span class="successMessage">Successful</span>
+    </div>
+
+    <canvas id="canvas2">error: browser does not support canvas</canvas>
+    <canvas id="canvas">error: browser does not support canvas</canvas>
+    <script src="canvas.js"></script>
+    <script src="parser.js"></script>
+    <script src="display.js"></script>
+</body>
+</html>
+
+<script>
+
+    
+
+</script>

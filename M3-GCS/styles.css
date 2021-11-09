@@ -1,0 +1,314 @@
+@import url('https://pro.fontawesome.com/releases/v6.0.0-beta1/css/all.css');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans Display', sans-serif;
+}
+
+::placeholder{
+    font-weight: bold;
+}
+
+body{
+    /* width: 100%;
+    height: 100%; */
+    background-color: rgb(231, 231, 231);
+}
+
+header{
+    width: 100%;
+    display: flex;
+    height: 8vh;
+    background-color: gray;
+}
+
+/* Styling for all the buttons */
+button{
+    display: inline-block;
+    cursor: pointer;
+    background-color: #fefefe;
+    border: none;
+    border-radius: 6px;
+    color: black;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    padding: 10px;
+}
+button:hover{
+    background-color: #e2e2e2;
+}
+
+/* header */
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 100;
+}
+
+.navbar-left{
+    display: flex;
+    flex-grow: 0.25;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navbar-right{
+    display: flex;
+    flex-flow: row wrap;
+    flex-grow: 0.25;
+    justify-content: space-between;
+}
+.shapes{
+    display: flex;
+    flex-direction: column;
+}
+
+.advctr{
+    background-color: #fefefe;
+    width: 50%;
+    text-align: center;
+    font-size: 0.75rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.advctr:hover{
+    background-color: #e2e2e2;
+}
+/* Shapes button */
+.shapesBtn{
+    padding: 3px;
+    font-size: 20px;
+}
+
+.text-command{
+    display: flex;
+    flex-direction: row;
+}
+.text-command div{
+    display: flex ;
+    flex-direction: column;
+    margin-right: 15px;
+}
+
+.text-command textarea{
+    display: flex;
+    resize: none;
+    border-radius: 3px;
+}
+
+/* Text-commands buttons */
+.text-command div button{
+    padding: 3px;
+    margin: 2px;
+    font-size: 10px;
+}
+
+.numbers{
+    display: flex;
+    gap: 10px; 
+}
+
+.numbers input{
+    border: black solid 1px;
+    border-radius: 2px;
+    width: 2.3rem;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* colors */
+.inputs div{
+    height: 1.7rem;
+    width: 2.5rem;
+    background-color: black;
+    margin: auto;
+    border-radius: 6px;
+}
+.inputs input{
+    height: 1.7rem;
+    width: 2.5rem;
+    margin: auto;
+    text-align: center;
+    border: none;
+    border-radius: 6px;
+}
+
+.inputs{
+    display: flex;
+    flex-direction: row;
+    gap: 16px;   
+}
+
+.run-clear{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    position: relative;
+    right: 20px;
+}
+
+/* Button */
+.run-clear button{
+    width: 5rem;
+}
+
+#clear{
+    background-color: rgb(238, 90, 90);
+}
+/* .shapes{
+    position: relative;
+    display: inline-block;
+} */
+
+/* .dropdown{
+    position: absolute;
+    background-color: #fefefe;
+    text-align: center;
+    visibility: hidden;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+} */
+
+/* .dropdown button{
+    margin-top: 10px;
+    padding: 0px 13px 0px 13px;
+    border-bottom: 1px solid black;
+} */
+
+.dropdown{
+    background-color: #fefefe;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 4px;
+}
+
+
+#shapes{
+    padding: 10px;
+}
+
+.canvasStyle{
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    height: 80%;
+    background-color: blue;
+}
+
+#canvas {
+    width: 92vmin;
+    height: 92vmin;
+}
+
+#canvas2{
+    width: 27%;
+}
+
+/* header */
+
+/* Scroll */
+
+.error{
+    color: #ff2616;
+}
+.errorDiv{
+    border: 1px solid #ff2616;
+    padding: 20px;
+    
+    background-color: #fff;
+    box-shadow: 10px 10px 5px rgba(255, 38, 22, 0.25);
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%);
+    display: none;
+}
+.errorMessage{
+    text-transform: capitalize;
+    padding-left: 20px;
+    font-size: 30px;
+    color: #ff2616;
+}
+.errorP{
+    padding: 20px 0;
+    width: 300px;
+}
+
+/* Succcess */
+.successDiv{
+    background-color: #fff;
+    border: 1px solid #4aff3d;
+    padding: 15px;
+    box-shadow: 10px 10px 5px rgba(43, 255, 42, 0.2);
+    position: absolute;
+    right: 2%;
+    bottom: 4%;
+    display: none;
+}
+
+.success{
+    color: #4aff3d;
+}
+
+.successMessage{
+    color: #4aff3d;
+    font-size: 30px;
+    text-transform: capitalize;
+    padding: 0 10px 0 20px;
+    font-weight: bold;
+}
+
+/* Scroll */
+.scrollDiv{
+    display: grid;
+}
+.up{
+    grid-column: 2;
+    grid-row: 1;
+    margin: 6px 4px;
+}
+.left{
+    
+    grid-row: 2;
+    margin: 4px;
+}
+.circle{
+    grid-row: 2;
+    margin: 4px;
+    text-align: center;
+    cursor: pointer;
+    color: transparent;
+    border: red solid 2px;
+    border-radius: 100%;
+}
+.right{ 
+    
+    grid-row: 2;
+    margin: 4px;
+}
+.down{
+    grid-column: 2;
+    grid-row: 3;
+    margin: 6px 4px;
+}
+.absolute{
+    position: absolute;
+}
+.e{
+    color: #ff2616;
+    text-align: center;
+}
+.e:hover{
+    cursor: pointer;
+}
+

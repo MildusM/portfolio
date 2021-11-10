@@ -1,0 +1,20 @@
+*{
+    font-family: 'Red Hat Mono', monospace;
+    
+}
+
+.success{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%);
+    display: none;
+}
+
+.error{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%);
+    display: none;
+}
